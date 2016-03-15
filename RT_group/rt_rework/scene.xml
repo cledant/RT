@@ -1,0 +1,150 @@
+<scene name="Scene 1">
+  <parameters>
+    <resolution x="1024" y="768"/>
+    <background value= "000000"/>
+    <ambient value="20%"/>
+    <anti-aliasing value="0"/>
+    <shadow set="on"/>
+    <camera>
+      <crd x="-250" y="150" z="0"/>
+      <rotation x="0" y="0" z="0"/>
+    </camera>
+  </parameters>
+
+<!--          TEXTURES          -->
+<!--            LIST            -->
+
+<textures>
+	<item id="1">
+		<type value="img"/>
+		<file value="./texture/world.xpm"/>
+	</item>
+
+	<item id="2">
+		<type value="proc"/>
+		<name value="checker"/>
+	</item>
+</textures>
+
+<!--          MATERIALS         -->
+<!--            LIST            -->
+
+<!-- red, with specular -->
+  <materials>
+    <item id="1">
+      <specular value="50"/>
+      <reflection value="80%"/>
+	  <color value="FF3333"/>
+	  <texture value="1"/>
+    </item>
+
+<!-- green, with specular -->
+    <item id="2">
+      <specular value="50"/>
+      <reflection value="0%"/>
+	  <color value="99FF33"/>
+	  <texture value="2"/>
+    </item>
+
+<!-- blue, with specular -->
+    <item id="3">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <color value="3399FF"/>
+    </item>
+
+<!-- yellow, with specular -->
+    <item id="4">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <color value="FFFF33"/>
+    </item>
+
+<!-- orange, with specular -->
+    <item id="5">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <color value="FF9933"/>
+    </item>
+
+<!-- purple, with specular -->
+    <item id="6">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <color value="9933FF"/>
+    </item>
+
+  </materials>
+
+<!--          LIGHTS
+-->
+<!--           LIST            -->
+
+  <lights>
+
+    <item id="2">
+      <type>sun</type>
+      <crd x="-2000" y="1000" z="200"/>
+      <color value="FFFFFF"/>
+    </item>
+
+  </lights>
+
+  <!--          OBJECTS           -->
+  <!--           LIST            -->
+
+  <objects>
+  <!--#
+    <item id="1">
+      <type value="1"/>
+      <crd x="0" y="0" z="100"/>
+      <rotation x="0" y="0" z="0"/>
+      <material value="4"/>
+    </item>
+  #-->
+
+  <!--#
+    <item id="4">
+      <type value="1"/>
+      <crd x="0" y="0" z="200"/>
+      <rotation x="60" y="0" z="0"/>
+      <material value="5"/>
+    </item>
+  #-->
+
+    <item id="2">
+      <type value="2"/>
+      <crd x="300" y="400" z="50"/>
+      <radius value="50"/>
+      <material value="1"/>
+    </item>
+
+    <item id="5">
+      <type value="2"/>
+      <crd x="300" y="200" z="50"/>
+      <radius value="50"/>
+      <material value="2"/>
+  	</item>
+
+  <!--#
+    <item id="3">
+      <type value="3"/>
+      <crd x="0" y="-50" z="0"/>
+      <rotation x="-45" y="0" z="0"/>
+      <radius value="25"/>
+      <material value="3"/>
+	</item>
+  #-->
+
+  <!--#
+    <item id="4">
+      <type value="4"/>
+      <crd x="0" y="0" z="0"/>
+      <rotation x="0" y="0" z="0"/>
+      <radius value="30"/>
+      <material value="3"/>
+    </item>
+  #-->
+
+  </objects>
+</scene>
