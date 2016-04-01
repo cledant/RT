@@ -1,0 +1,394 @@
+<scene name="Transparency">
+  <parameters>
+    <resolution x="1024" y="768"/>
+    <background value= "000000"/>
+    <ambient value="20%"/>
+    <anti-aliasing value="0"/>
+    <shadow set="on"/>
+    <camera>
+      <crd x="-1500" y="0" z="0"/>
+      <rotation x="0" y="0" z="0"/>
+    </camera>
+  </parameters>
+
+<!--           IMAGES           -->
+<!--            LIST            -->
+  <images>
+    <item id="1">
+      <file value="./texture/earth.xpm"/>
+    </item>
+
+    <item id="3">
+      <file value="./texture/marbled.xpm"/>
+    </item>
+
+    <item id="4">
+      <file value="./texture/wood.xpm"/>
+    </item>
+
+    <item id="5">
+      <file value="./texture/red_rock.xpm"/>
+    </item>
+
+  </images>
+
+<!--          MATERIALS         -->
+<!--            LIST            -->
+
+<!-- red, with specular -->
+  <materials>
+    <item id="1">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="FF3333"/>
+    </item>
+
+<!-- green, with specular -->
+    <item id="2">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="66CC00"/>
+    </item>
+
+<!-- blue, with specular -->
+    <item id="3">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="0099FF"/>
+    </item>
+
+<!-- yellow, with specular -->
+    <item id="4">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="FFFF33"/>
+    </item>
+
+<!-- orange, with specular -->
+    <item id="5">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="FF9933"/>
+    </item>
+
+<!-- purple, glass, with specular -->
+    <item id="6">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <transparency value="50%"/>
+      <refraction value="160%"/>
+      <color value="9933FF"/>
+    </item>
+
+  <!-- red, with reflection -->
+    <item id="11">
+      <specular value="0"/>
+      <reflection value="50%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="FF3333"/>
+    </item>
+
+  <!-- green, with reflection -->
+    <item id="12">
+      <specular value="0"/>
+      <reflection value="50%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="66CC00"/>
+    </item>
+
+  <!-- blue, with reflection -->
+    <item id="13">
+      <specular value="0"/>
+      <reflection value="50%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="0099FF"/>
+    </item>
+
+  <!-- yellow, with reflection -->
+    <item id="14">
+      <specular value="0"/>
+      <reflection value="50%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="FFFF33"/>
+    </item>
+
+  <!-- orange, with reflection -->
+    <item id="15">
+      <specular value="0"/>
+      <reflection value="50%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="FF9933"/>
+    </item>
+
+  <!-- purple, with reflection -->
+    <item id="16">
+      <specular value="0"/>
+      <reflection value="50%"/>
+      <transparency value="50%"/>
+      <refraction value="160%"/>
+      <color value="9933FF"/>
+    </item>
+
+  <!-- red, with transparency -->
+    <item id="21">
+      <specular value="0"/>
+      <reflection value="0%"/>
+      <transparency value="50%"/>
+      <refraction value="160"/>
+      <color value="FF3333"/>
+    </item>
+
+  <!-- green, with transparency -->
+    <item id="22">
+      <specular value="0"/>
+      <reflection value="0%"/>
+      <transparency value="50%"/>
+      <refraction value="160"/>
+      <color value="66CC00"/>
+    </item>
+
+  <!-- blue, with transparency -->
+    <item id="23">
+      <specular value="0"/>
+      <reflection value="0%"/>
+      <transparency value="50%"/>
+      <refraction value="160"/>
+      <color value="0099FF"/>
+    </item>
+
+  <!-- yellow, with transparency -->
+    <item id="24">
+      <specular value="0"/>
+      <reflection value="0%"/>
+      <transparency value="50%"/>
+      <refraction value="160"/>
+      <color value="FFFF33"/>
+    </item>
+
+  <!-- orange, with transparency -->
+    <item id="25">
+      <specular value="0"/>
+      <reflection value="0%"/>
+      <transparency value="50%"/>
+      <refraction value="160"/>
+      <color value="FF9933"/>
+    </item>
+
+  <!-- purple, with transparency -->
+    <item id="26">
+      <specular value="0"/>
+      <reflection value="50%"/>
+      <transparency value="50%"/>
+      <refraction value="160%"/>
+      <color value="9933FF"/>
+    </item>
+
+<!-- pure mirror -->
+    <item id="30">
+      <specular value="0"/>
+      <reflection value="60%"/>
+      <transparency value="0%"/>
+      <refraction value="100%"/>
+      <color value="000000"/>
+    </item>
+
+  <!-- material for img brut -->
+    <item id="40">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="FFFFFF"/>
+    </item>
+
+  <!-- material for img transparent -->
+    <item id="41">
+      <specular value="0"/>
+      <reflection value="0%"/>
+      <transparency value="50%"/>
+      <refraction value="100%"/>
+      <color value="FFFFFF"/>
+    </item>
+
+  </materials>
+
+  <!--          TEXTURES          -->
+  <!--            LIST            -->
+
+  <textures>
+
+  <!-- earth transparent -->
+    <item id="1">
+      <type value="3"/>
+      <image value="1"/>
+      <material_img value="41"/>
+    </item>
+
+    <item id="2">
+      <type value="2"/>
+      <material1 value="6"/>
+      <material2 value="3"/>
+      <size value="32"/>
+    </item>
+
+    <item id="3">
+      <type value="2"/>
+      <material1 value="3"/>
+      <material2 value="3"/>
+      <size value="256"/>
+    </item>
+
+    <item id="4">
+      <type value="2"/>
+      <material1 value="30"/>
+      <material2 value="30"/>
+      <size value="256"/>
+    </item>
+
+    <item id="5">
+      <type value="3"/>
+      <image value="1"/>
+      <material_img value="40"/>
+    </item>
+
+    <item id="6">
+      <type value="3"/>
+      <image value="3"/>
+      <material_img value="40"/>
+    </item>
+
+    <item id="7">
+      <type value="3"/>
+      <image value="4"/>
+      <material_img value="40"/>
+    </item>
+
+    <item id="8">
+      <type value="3"/>
+      <image value="5"/>
+      <material_img value="40"/>
+    </item>
+
+    <item id="9">
+      <type value="1"/>
+      <material1 value="6"/>
+    </item>
+
+    <item id="10">
+      <type value="1"/>
+      <material1 value="5"/>
+    </item>
+  </textures>
+
+
+
+<!--          LIGHTS           -->
+<!--           LIST            -->
+
+  <lights>
+
+    <item id="1">
+      <type value="0"/>
+      <crd x="-1000" y="250" z="1500"/>
+      <intensity value="20000"/>
+    </item>
+
+<!--#
+    <item id="2">
+      <type value="1"/>
+      <vector x="-1" y="-1" z="1"/>
+      <intensity value="100"/>
+    </item>
+#-->
+
+  </lights>
+
+  <!--          OBJECTS           -->
+  <!--           LIST            -->
+
+  <objects>
+
+    <item id="3">
+      <type value="3"/>
+      <crd x="-500" y="-50" z="10"/>
+      <rotation x="0" y="0" z="-90"/>
+      <radius value="60"/>
+      <texture value="9"/>
+    </item>
+
+    <item id="4">
+      <type value="3"/>
+      <crd x="-700" y="100" z="10"/>
+      <rotation x="0" y="0" z="-90"/>
+      <radius value="30"/>
+      <texture value="10"/>
+    </item>
+
+    <item id="5">
+      <type value="2"/>
+      <crd x="-250" y="300" z="10"/>
+      <rotation x="-45" y="180" z="90"/>
+      <radius value="150"/>
+      <texture value="1"/>
+    </item>
+
+    <item id="6">
+      <type value="1"/>
+      <crd x="0" y="0" z="-350"/>
+      <rotation x="0" y="0" z="0"/>
+      <texture value="3"/>
+    </item>
+
+    <item id="7">
+      <type value="1"/>
+      <crd x="0" y="-600" z="-50"/>
+      <rotation x="90" y="0" z="-10"/>
+      <texture value="7"/>
+      <sizeX value="250%"/>
+      <sizeY value="250%"/>
+      <translateX value="0"/>
+      <translateY value="0"/>
+    </item>
+
+    <item id="8">
+      <type value="1"/>
+      <crd x="0" y="600" z="-50"/>
+      <rotation x="-90" y="0" z="10"/>
+      <texture value="7"/>
+      <sizeX value="250%"/>
+      <sizeY value="250%"/>
+      <translateX value="0"/>
+      <translateY value="0"/>
+    </item>
+
+    <item id="9">
+      <type value="1"/>
+      <crd x="0" y="1000" z="-50"/>
+      <rotation x="0" y="90" z="0"/>
+      <texture value="4"/>
+    </item>
+
+    <item id="99">
+      <type value="2"/>
+      <crd x="-600" y="0" z="0"/>
+      <rotation x="0" y="0" z="0"/>
+      <radius value="30"/>
+      <texture value="5"/>
+    </item>
+  </objects>
+</scene>

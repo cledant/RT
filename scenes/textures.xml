@@ -1,0 +1,181 @@
+<scene name="Texture demo">
+	<parameters>
+		<resolution x="1024" y="768"/>
+		<background value= "000000"/>
+		<ambient value="20%"/>
+		<anti-aliasing value="0"/>
+		<camera>
+			<crd x="-1500" y="-50" z="100"/>
+			<rotation x="0" y="10" z="0"/>
+		</camera>
+	</parameters>
+
+<!--           IMAGES           -->
+<!--            LIST            -->
+	<images>
+		<item id="1">
+			<file value="./texture/world.xpm"/>
+		</item>
+
+		<item id="2">
+			<file value="./texture/earth.xpm"/>
+		</item>
+
+    <item id="3">
+			<file value="./texture/jupiter.xpm"/>
+		</item>
+
+		<item id="4">
+			<file value="./texture/moon.xpm"/>
+		</item>
+
+    <item id="5">
+      <file value="./texture/wood.xpm"/>
+    </item>
+
+    <item id="6">
+			<file value="./texture/brickm3.xpm"/>
+		</item>
+
+	</images>
+
+  <!--          MATERIALS         -->
+  <!--            LIST            -->
+
+    <materials>
+    <!-- material for img brut -->
+      <item id="1">
+        <specular value="50"/>
+        <reflection value="0%"/>
+        <transparency value="0%"/>
+        <refraction value="0"/>
+        <color value="FFFFFF"/>
+      </item>
+
+    <!-- material tmp -->
+      <item id="2">
+        <specular value="50"/>
+        <reflection value="0%"/>
+        <transparency value="0%"/>
+        <refraction value="0%"/>
+        <color value="FFFFFF"/>
+      </item>
+
+    </materials>
+
+	<!--          TEXTURES          -->
+	<!--            LIST            -->
+
+	<textures>
+    <item id="1">          <!--    IMAGE  (BRICK)  -->
+      <type value="3"/>
+      <image value="6"/>
+      <material_img value="1"/>
+    </item>
+
+    <item id="2">          <!--    IMAGE  (EARTH MAP)  -->
+      <type value="3"/>
+      <image value="1"/>
+      <material_img value="1"/>
+    </item>
+
+    <item id="3">          <!--    IMAGE  (WOOD)  -->
+      <type value="3"/>
+      <image value="5"/>
+      <material_img value="1"/>
+    </item>
+
+    <item id="4">          <!--    IMAGE  (JUPITER)  -->
+      <type value="3"/>
+      <image value="3"/>
+      <material_img value="1"/>
+    </item>
+	</textures>
+
+<!--          LIGHTS           -->
+<!--           LIST            -->
+
+  <lights>
+
+    <item id="1">
+      <type value="0"/>
+      <crd x="-1500" y="0" z="100"/>
+      <intensity value="200"/>
+    </item>
+  </lights>
+
+  <!--          OBJECTS           -->
+  <!--           LIST             -->
+
+  <objects>
+    <item id="1">
+        <type value="1"/>
+        <crd x="0" y="0" z="0"/>
+        <rotation x="0" y="0" z="90"/>
+        <texture value="1"/>
+        <sizeX value="100%"/>
+        <sizeY value="100%"/>
+        <translateX value="0"/>
+        <translateY value="0"/>
+    </item>
+    <item id="2">
+        <type value="1"/>
+        <crd x="0" y="0" z="320"/>
+        <rotation x="0" y="0" z="90"/>
+        <texture value="1"/>
+        <sizeX value="50%"/>
+        <sizeY value="50%"/>
+        <translateX value="0"/>
+        <translateY value="0"/>
+    </item>
+      <item id="3">
+        <type value="1"/>
+        <crd x="-512" y="0" z="0"/>
+        <rotation x="0" y="90" z="0"/>
+        <texture value="3"/>
+    </item>
+    <item id="4">
+        <type value="1"/>
+        <crd x="-1984" y="0" z="0"/>
+        <rotation x="0" y="90" z="0"/>
+        <texture value="1"/>
+    </item>
+    <item id="5">
+        <type value="1"/>
+        <crd x="0" y="-448" z="0"/>
+        <rotation x="90" y="90" z="180"/>
+        <texture value="3"/>
+    </item>
+    <item id="6">
+        <type value="1"/>
+        <crd x="0" y="448" z="0"/>
+        <rotation x="90" y="90" z="180"/>
+        <texture value="3"/>
+    </item>
+    <item id="7">
+        <type value="2"/>
+        <crd x="-1300" y="-100" z="100"/>
+        <rotation x="90" y="0" z="0"/>
+        <radius value="40"/>
+        <texture value="4"/>
+    </item>
+    <item id="8">
+        <type value="3"/>
+        <crd x="-1000" y="100" z="100"/>
+        <rotation x="0" y="0" z="0"/>
+        <radius value="20"/>
+        <texture value="1"/>
+        <sizeZ value="50%"/>
+        <translateZ value="0"/>
+    </item>
+    <item id="9">
+        <type value="4"/>
+        <crd x="-1000" y="0" z="100"/>
+        <rotation x="0" y="0" z="0"/>
+        <radius value="10"/>
+        <texture value="1"/>
+        <sizeZ value="20%"/>
+        <translateZ value="100"/>
+    </item>
+  </objects>
+</scene>

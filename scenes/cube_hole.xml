@@ -1,0 +1,289 @@
+<scene name="Cube Hole">
+	<parameters>
+		<resolution x="1024" y="768"/>
+		<background value= "000000"/>
+		<ambient value="20%"/>
+		<anti-aliasing value="0"/>
+		<shadow set="on"/>
+		<camera>
+			<crd x="-1500" y="-50" z="-100"/>
+			<rotation x="20" y="20" z="20"/>
+		</camera>
+	</parameters>
+
+<!--           IMAGES           -->
+<!--            LIST            -->
+	<images>
+		<item id="1">
+			<file value="./texture/world.xpm"/>
+		</item>
+
+	</images>
+
+<!--          MATERIALS         -->
+<!--            LIST            -->
+
+<!-- red, with specular -->
+	<materials>
+		<item id="1">
+			<specular value="50"/>
+			<reflection value="50%"/>
+			<color value="FF3333"/>
+			<transparency value="0%"/>
+			<refraction value="0"/>
+		</item>
+
+<!-- green, with specular -->
+		<item id="2">
+			<specular value="50"/>
+			<reflection value="0%"/>
+			<transparency value="0%"/>
+			<refraction value="0"/>
+			<color value="99FF33"/>
+		</item>
+
+<!-- blue, with specular -->
+		<item id="3">
+			<specular value="0"/>
+			<reflection value="0%"/>
+			<transparency value="0%"/>
+			<refraction value="0"/>
+			<color value="0099FF"/>
+		</item>
+
+<!-- yellow, with specular -->
+		<item id="4">
+			<specular value="50"/>
+			<reflection value="0%"/>
+			<transparency value="0%"/>
+			<refraction value="0"/>
+			<color value="FFFF33"/>
+		</item>
+
+<!-- orange, with specular -->
+		<item id="5">
+			<specular value="50"/>
+			<reflection value="0%"/>
+			<transparency value="0%"/>
+			<refraction value="0"/>
+			<color value="FF9933"/>
+		</item>
+
+<!-- purple, glass, with specular -->
+		<item id="6">
+			<specular value="50"/>
+			<reflection value="0%"/>
+			<transparency value="40%"/>
+			<refraction value="160%"/>
+			<color value="9933FF"/>
+		</item>
+
+<!-- pure mirror, with specular -->
+		<item id="7">
+			<specular value="50"/>
+			<reflection value="100%"/>
+			<transparency value="0%"/>
+			<refraction value="90%"/>
+			<color value="000000"/>
+		</item>
+
+		<!-- material for img1 -->
+			<item id="8">
+				<specular value="50"/>
+				<reflection value="0%"/>
+				<transparency value="0%"/>
+				<refraction value="0"/>
+				<color value="FFFFFF"/>
+			</item>
+
+	</materials>
+
+	<!--          TEXTURES          -->
+	<!--            LIST            -->
+
+	<textures>
+		<item id="1">
+			<type value="1"/>
+			<material1 value="5"/>
+			<size value="2"/>
+		</item>
+
+		<item id="2">
+			<type value="1"/>
+			<material1 value="6"/>
+			<material2 value="3"/>
+			<size value="32"/>
+		</item>
+
+		<item id="3">
+			<type value="2"/>
+			<material1 value="2"/>
+			<material2 value="3"/>
+			<size value="8"/>
+		</item>
+
+		<item id="4">
+			<type value="2"/>
+			<material1 value="1"/>
+			<material2 value="7"/>
+			<size value="256"/>
+		</item>
+
+		<item id="5">
+			<type value="3"/>
+			<image value="1"/>
+			<material_img value="8"/>
+		</item>
+
+		<item id="6">
+			<type value="1"/>
+			<material1 value="1"/>
+			<size value="2"/>
+		</item>
+
+	</textures>
+
+<!--          LIGHTS           -->
+<!--           LIST            -->
+
+	<lights>
+
+		<item id="1">
+			<type value="0"/>
+			<crd x="-1000" y="500" z="1500"/>
+			<intensity value="100"/>
+		</item>
+
+<!--#
+		<item id="2">
+			<type value="0"/>
+			<crd x="1000" y="-500" z="1500"/>
+			<intensity value="100"/>
+		</item>
+#-->
+	</lights>
+
+	<!--          OBJECTS           -->
+	<!--           LIST             -->
+
+	<objects>
+
+		<item id="1">
+			<type value="1"/>
+			<crd x="0" y="0" z="-200"/>
+			<rotation x="0" y="0" z="0"/>
+			<texture value="2"/>
+			<sizeX value="100%"/>
+			<sizeY value="100%"/>
+			<translateX value="0"/>
+			<translateY value="0"/>
+		</item>
+<!--
+		<item id="2">
+			<type value="2"/>
+			<crd x="-1000" y="-50" z="-100"/>
+			<radius value="15"/>
+			<texture value="5"/>
+		</item>
+-->
+		<item id="3">
+			<type value="3"/>
+			<crd x="-200" y="-400" z="0"/>
+			<rotation x="0" y="0" z="0"/>
+			<radius value="75"/>
+			<texture value="5"/>
+			<sizeX value="100%"/>
+			<sizeY value="100%"/>
+			<translateX value="0"/>
+			<translateY value="0"/>
+		</item>
+
+		<csg id="4">
+			<scale value="100%">
+			<crd x="-1000" y="-50" z="-100"/>
+			<rotation x="15" y="30" z="45"/>
+			<tree type="2">
+				<fork1 type="3">
+					<fork1 type="3">
+						<fork1 type="3">
+							<fork1 type="0">
+								<item>
+									<type value="1"/>
+									<crd x="30" y="0" z="0"/>
+									<rotation x="0" y="90" z="0"/>
+									<texture value="1"/>
+									<sizeZ value="100%"/>
+									<translateZ value="0"/>
+								</item>
+							</fork1>
+							<fork2 type="0">
+								<item>
+									<type value="1"/>
+									<crd x="-30" y="0" z="0"/>
+									<rotation x="0" y="-90" z="0"/>
+									<texture value="1"/>
+									<sizeZ value="100%"/>
+									<translateZ value="0"/>
+								</item>
+							</fork2>
+						</fork1>
+						<fork2 type="3">
+							<fork1 type="0">
+								<item>
+									<type value="1"/>
+									<crd x="0" y="-30" z="0"/>
+									<rotation x="90" y="0" z="0"/>
+									<texture value="1"/>
+									<sizeZ value="100%"/>
+									<translateZ value="0"/>
+								</item>
+							</fork1>
+							<fork2 type="0">
+								<item>
+									<type value="1"/>
+									<crd x="0" y="30" z="0"/>
+									<rotation x="-90" y="0" z="0"/>
+									<texture value="1"/>
+									<sizeZ value="100%"/>
+									<translateZ value="0"/>
+								</item>
+							</fork2>
+						</fork2>
+					</fork1>
+					<fork2 type="3">
+						<fork1 type="0">
+							<item>
+								<type value="1"/>
+								<crd x="0" y="0" z="30"/>
+								<rotation x="5" y="0" z="0"/>
+								<texture value="1"/>
+								<sizeZ value="100%"/>
+								<translateZ value="0"/>
+							</item>
+						</fork1>
+						<fork2 type="0">
+							<item>
+								<type value="1"/>
+								<crd x="0" y="0" z="-30"/>
+								<rotation x="180" y="0" z="0"/>
+								<texture value="1"/>
+								<sizeZ value="100%"/>
+								<translateZ value="0"/>
+							</item>
+						</fork2>
+					</fork2>
+				</fork1>
+				<fork2 type="0">
+					<item>
+						<type value="2"/>
+						<crd x="0" y="0" z="0"/>
+						<rotation x="0" y="0" z="0"/>
+						<radius value="35"/>
+						<texture value="1"/>
+					</item>
+				</fork2>
+			</tree>
+		</csg>
+
+	</objects>
+</scene>

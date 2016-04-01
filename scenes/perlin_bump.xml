@@ -1,0 +1,281 @@
+<scene name="Perlin Bump">
+  <parameters>
+    <resolution x="1024" y="768"/>
+    <background value= "000000"/>
+    <ambient value="20%"/>
+    <anti-aliasing value="0"/>
+    <shadow set="on"/>
+    <camera>
+      <crd x="-1500" y="300" z="0"/>
+      <rotation x="0" y="0" z="0"/>
+    </camera>
+  </parameters>
+
+<!--           IMAGES           -->
+<!--            LIST            -->
+  <images>
+    <item id="1">
+      <file value="./texture/world.xpm"/>
+    </item>
+  </images>
+
+<!--          MATERIALS         -->
+<!--            LIST            -->
+
+<!-- red, with specular -->
+  <materials>
+    <item id="1">
+      <specular value="50"/>
+      <reflection value="50%"/>
+      <color value="FF3333"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <texture value="2"/>
+    </item>
+
+<!-- green, with specular -->
+    <item id="2">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="99FF33"/>
+    </item>
+
+<!-- blue, with specular -->
+    <item id="3">
+      <specular value="0"/>
+      <reflection value="0%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="0099FF"/>
+    </item>
+
+<!-- yellow, with specular -->
+    <item id="4">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="FFFF33"/>
+    </item>
+
+<!-- orange, with specular -->
+    <item id="5">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="FF9933"/>
+    </item>
+
+<!-- purple, glass, with specular -->
+    <item id="6">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <transparency value="40%"/>
+      <refraction value="160%"/>
+      <color value="9933FF"/>
+    </item>
+
+<!-- pure mirror, with specular -->
+    <item id="7">
+      <specular value="50"/>
+      <reflection value="100%"/>
+      <transparency value="0%"/>
+      <refraction value="100%"/>
+      <color value="000000"/>
+    </item>
+
+  <!-- material for img1 -->
+    <item id="8">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="FFFFFF"/>
+    </item>
+
+    <!-- material for perlin -->
+    <item id="9">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="990055"/>
+    </item>
+
+    <!-- tmp material for perlin -->
+    <item id="10">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="000000"/>
+    </item>
+
+    <!-- material for perlin -->
+    <item id="11">
+      <specular value="50"/>
+      <reflection value="0%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="666633"/>
+    </item>
+    <item id="12">
+      <specular value="1"/>
+      <reflection value="0%"/>
+      <transparency value="0%"/>
+      <refraction value="0"/>
+      <color value="33FF66"/>
+    </item>
+</materials>
+  <!--          TEXTURES          -->
+  <!--            LIST            -->
+
+  <textures>
+    <item id="1">
+      <type value="1"/>
+      <material1 value="2"/>
+    </item>
+
+    <item id="2">
+      <type value="2"/>
+      <material1 value="2"/>
+      <material2 value="3"/>
+      <size value="8"/>
+    </item>
+
+    <item id="3">
+      <type value="2"/>
+      <material1 value="2"/>
+      <material2 value="3"/>
+      <size value="64"/>
+    </item>
+
+    <item id="4">
+      <type value="2"/>
+      <material1 value="1"/>
+      <material2 value="7"/>
+      <size value="256"/>
+    </item>
+
+    <item id="5">
+      <type value="3"/>
+      <image value="1"/>
+      <material_img value="8"/>
+    </item>
+
+    <item id="6">
+      <type value="4"/>
+      <material1 value="9"/>
+      <material2 value="10"/>
+      <grad_r value="1"/>
+      <grad_g value="1"/>
+      <grad_b value="-1"/>
+      <frequency value="50"/>
+      <octave value="4"/>
+    </item>
+
+    <item id="7">
+      <type value="4"/>
+      <material1 value="11"/>
+      <material2 value="10"/>
+      <grad_r value="-1"/>
+      <grad_g value="-1"/>
+      <grad_b value="1"/>
+      <frequency value="10"/>
+      <octave value="4"/>
+    </item>
+
+    <item id="8">
+      <type value="4"/>
+      <material1 value="12"/>
+      <material2 value="10"/>
+      <grad_r value="-1"/>
+      <grad_g value="-1"/>
+      <grad_b value="0"/>
+      <frequency value="50"/>
+      <octave value="4"/>
+    </item>
+
+    <item id="9">
+      <type value="4"/>
+      <material1 value="9"/>
+      <material2 value="10"/>
+      <grad_r value="1"/>
+      <grad_g value="1"/>
+      <grad_b value="-1"/>
+      <frequency value="25"/>
+      <octave value="4"/>
+    </item>
+  </textures>
+
+<!--          LIGHTS           -->
+<!--           LIST            -->
+
+  <lights>
+
+
+    <item id="1">
+      <type value="0"/>
+      <crd x="-2000" y="600" z="200"/>
+      <intensity value="20000"/>
+    </item>
+
+<!--#
+    <item id="2">
+      <type value="1"/>
+      <vector x="-1" y="1" z="1"/>
+      <intensity value="100"/>
+    </item>
+#-->
+  </lights>
+
+  <!--          OBJECTS           -->
+  <!--           LIST            -->
+
+  <objects>
+    <item id="1">
+      <type value="3"/>
+      <crd x="-500" y="50" z="10"/>
+      <rotation x="0" y="0" z="0"/>
+      <radius value="30"/>
+      <normal type="2"/>
+      <texture value="6"/>
+      <sizeZ value="100%"/>
+      <translateZ value="0"/>
+    </item>
+    <item id="2">
+      <type value="2"/>
+      <crd x="-1200" y="300" z="10"/>
+      <rotation x="-45" y="180" z="70"/>
+      <normal type="2"/>
+      <radius value="50"/>
+      <texture value="8"/>
+    </item>
+    <item id="3">
+      <type value="1"/>
+      <crd x="0" y="0" z="-50"/>
+      <rotation x="0" y="90" z="0"/>
+      <texture value="7"/>
+      <normal type="2"/>
+      <sizeX value="50%"/>
+      <sizeY value="50%"/>
+      <translateX value="0"/>
+      <translateY value="0"/>
+    </item>
+    <item id="4">
+      <type value="1"/>
+      <crd x="0" y="0" z="-80"/>
+      <rotation x="0" y="0" z="45"/>
+      <texture value="9"/>
+      <normal type="2"/>
+      <freq value="20"/>
+      <sizeX value="50%"/>
+      <sizeY value="50%"/>
+      <translateX value="0"/>
+      <translateY value="0"/>
+    </item>
+  </objects>
+</scene>
