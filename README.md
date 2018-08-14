@@ -1,5 +1,7 @@
 # RT
 
+![screenshot](/screenshot/rt.png?raw=true)
+
 42 group project done with tpierron, vlize, mbragard.  
 Raytracer using 42 graphic api minilibx.
 
